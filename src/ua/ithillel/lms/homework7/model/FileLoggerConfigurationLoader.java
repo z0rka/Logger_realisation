@@ -6,8 +6,8 @@ import java.io.InputStream;
 import java.time.LocalDateTime;
 import java.util.Properties;
 import ua.ithillel.lms.homework7.model.interfaces.ConfigurationLoadable;
-import ua.ithillel.lms.homework7.model.properties.LoggingLevel;
-import ua.ithillel.lms.homework7.model.properties.PropertiesForFile;
+import ua.ithillel.lms.homework7.model.enums.LoggingLevel;
+import ua.ithillel.lms.homework7.model.enums.PropertiesForFile;
 
 public class FileLoggerConfigurationLoader implements ConfigurationLoadable {
 

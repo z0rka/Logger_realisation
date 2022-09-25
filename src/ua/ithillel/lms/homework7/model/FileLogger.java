@@ -7,7 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import ua.ithillel.lms.homework7.model.exeptions.FileMaxSizeReachedException;
 import ua.ithillel.lms.homework7.model.interfaces.AbstractLoggable;
-import ua.ithillel.lms.homework7.model.properties.LoggingLevel;
+import ua.ithillel.lms.homework7.model.enums.LoggingLevel;
 
 public class FileLogger implements AbstractLoggable {
 

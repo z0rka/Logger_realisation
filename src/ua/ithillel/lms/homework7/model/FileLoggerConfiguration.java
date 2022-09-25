@@ -1,6 +1,6 @@
 package ua.ithillel.lms.homework7.model;
 
-import ua.ithillel.lms.homework7.model.properties.LoggingLevel;
+import ua.ithillel.lms.homework7.model.enums.LoggingLevel;
 
 public class FileLoggerConfiguration extends AbstractLoggerConfiguration {
 

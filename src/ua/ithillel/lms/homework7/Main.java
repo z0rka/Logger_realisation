@@ -1,7 +1,7 @@
 package ua.ithillel.lms.homework7;
 
 import ua.ithillel.lms.homework7.model.FileLogger;
-import ua.ithillel.lms.homework7.model.properties.LoggingLevel;
+import ua.ithillel.lms.homework7.model.enums.LoggingLevel;
 
 public class Main {
   public static void main(String[] args) {
