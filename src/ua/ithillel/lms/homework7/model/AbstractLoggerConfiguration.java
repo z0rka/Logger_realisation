@@ -1,6 +1,7 @@
 package ua.ithillel.lms.homework7.model;
 
 import java.util.Date;
+import ua.ithillel.lms.homework7.model.properties.LoggingLevel;
 
 public abstract class AbstractLoggerConfiguration {
 
@@ -18,7 +19,7 @@ public abstract class AbstractLoggerConfiguration {
     this.loggingLevel = loggingLevel;
   }
 
-  public void setRecordingFormat(String message) {
+  public void setRecordingFormat(String message,LoggingLevel loggingLevel) {
     this.recordingFormat = "|" + date.toString() + "|" + loggingLevel
         + "|" + " Message : " + message;
   }

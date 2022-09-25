@@ -6,6 +6,8 @@ import java.io.InputStream;
 import java.time.LocalDateTime;
 import java.util.Properties;
 import ua.ithillel.lms.homework7.model.interfaces.ConfigurationLoadable;
+import ua.ithillel.lms.homework7.model.properties.LoggingLevel;
+import ua.ithillel.lms.homework7.model.properties.PropertiesForFile;
 
 public class FileLoggerConfigurationLoader implements ConfigurationLoadable {
 
@@ -19,11 +21,16 @@ public class FileLoggerConfigurationLoader implements ConfigurationLoadable {
 
       properties.load(input);
 
-      fileLoggerConfiguration.fileName = properties.getProperty("FILE");
-      fileLoggerConfiguration.loggingLevel = LoggingLevel.valueOf(properties.getProperty("LEVEL"));
-      fileLoggerConfiguration.fileSize = Integer.parseInt(properties.getProperty("MAX_SIZE"));
+      fileLoggerConfiguration.fileName = properties.getProperty(
+          String.valueOf(PropertiesForFile.FILE));
 
-      String template = properties.getProperty("FORMAT");
+      fileLoggerConfiguration.loggingLevel = LoggingLevel.valueOf(properties.getProperty(
+          String.valueOf(PropertiesForFile.LEVEL)));
+
+      fileLoggerConfiguration.setFileSize(Integer.parseInt(properties.getProperty(
+          String.valueOf(PropertiesForFile.MAX_SIZE))));
+
+      String template = properties.getProperty(String.valueOf(PropertiesForFile.FORMAT));
 
       fileLoggerConfiguration.recordingFormat = String.format(template, LocalDateTime.now(),
           fileLoggerConfiguration.loggingLevel);
